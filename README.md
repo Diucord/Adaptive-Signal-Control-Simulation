@@ -105,17 +105,17 @@ py -m pip install simpy scipy numpy pandas matplotlib
 
 ## How to Run Simulation
 Fixed-Time Mode
-```bash
+```json
 py main.py --mode fixed
 ```
 
 Adaptive Mode
-```bash
+```json
 py main.py --mode adaptive
 ```
 
 Test All Scenarios
-```bash
+```json
 py main.py --mode experiment
 ```
 

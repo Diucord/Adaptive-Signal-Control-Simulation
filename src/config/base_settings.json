@@ -1,0 +1,9 @@
+{
+  "runtime": 1800,
+  "fixed_rep": 5,
+  "adaptive_rep": 10,
+  "seed": 123,
+  "log_adaptive_duration": true,
+  "save_plots": true,
+  "plot_dir": "results/plots"
+}
