@@ -24,7 +24,7 @@ The simulator uses **SimPy** for discrete-event simulation and **SciPy** for sta
 - Supports any SciPy distribution + EasyFit naming normalization.
 - Final results saved into: src/config/distributions.json
 - Simulation uses inverse CDF (PPF) for every lane:
-```python
+```bash
 delay = get_inverse_cdf(dist_name, params, p)
 ```
 
@@ -35,7 +35,7 @@ delay = get_inverse_cdf(dist_name, params, p)
 
 ### ✔ 3. Config-Driven Architecture
 No hardcoding. Everything is controlled by:
-```python
+```bash
 src/config/
     policies.json
     durations.json
@@ -54,7 +54,7 @@ config_validator.py ensures all configs are consistent:
 ---
 
 ## Project Structure
-```python
+```json
 adaptive-signal-control/
 │
 ├── main.py
@@ -89,40 +89,26 @@ adaptive-signal-control/
 
 ---
 
-## Installation
-1. Install Python packages
-
-Windows PowerShell:
-
-py -m pip install -r requirements.txt
-
-
-Or manual install:
-
-py -m pip install simpy scipy numpy pandas matplotlib
-
----
-
 ## How to Run Simulation
-Fixed-Time Mode
-```json
+1. *** Fixed-Time Mode ***
+```bash
 py main.py --mode fixed
 ```
 
-Adaptive Mode
-```json
+2. *** Adaptive Mode ***
+```bash
 py main.py --mode adaptive
 ```
 
-Test All Scenarios
-```json
+3. *** Test All Scenarios ***
+```bash
 py main.py --mode experiment
 ```
 
 ---
 
 ## Automatic Distribution Fitting
-1. Fit from CSV datasets
+1. *** Fit from CSV datasets ***
 Place CSV files in:
 ```bash
 data/arrivals/
@@ -133,7 +119,7 @@ Then run:
 py src/fitting/fit_all_distributions.py
 ```
 
-2. Fit from EasyFit (.edf) files
+2. *** Fit from EasyFit (.edf) files ***
 Place EDF files in:
 ```bash
 data/edf/
@@ -143,7 +129,7 @@ Run same command:
 py src/fitting/fit_all_distributions.py
 ```
 
-3. After fitting
+3. *** After fitting ***
 
 Automatically updated to:
 ```bash
@@ -189,14 +175,6 @@ Simulation uses this dynamically—no code changes required.
 
 ---
 
-## Development Notes
-
-Every file has English comments for clarity.  
-All parameters are externalized (config-based).  
-Optional helper modules (fit_gev.py, etc.) were removed for clarity.
-
---- 
-
 ## Contribution
 Contributions for bug fixes or feature improvements are always welcome!
 Feel free to open an [Issue] or [Pull Request] to participate.
@@ -205,7 +183,5 @@ Feel free to open an [Issue] or [Pull Request] to participate.
 
 ## Author
 Seyoon Oh
-
 Korea University — School of Industrial & Management Engineering
-
 Email: osy7336@korea.ac.kr
