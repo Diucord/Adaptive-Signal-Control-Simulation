@@ -54,7 +54,7 @@ config_validator.py ensures all configs are consistent:
 ---
 
 ## Project Structure
-```json
+```bash
 adaptive-signal-control/
 │
 ├── main.py
@@ -90,17 +90,17 @@ adaptive-signal-control/
 ---
 
 ## How to Run Simulation
-1. *** Fixed-Time Mode ***
+### 1. Fixed-Time Mode
 ```bash
 py main.py --mode fixed
 ```
 
-2. *** Adaptive Mode ***
+### 2. Adaptive Mode
 ```bash
 py main.py --mode adaptive
 ```
 
-3. *** Test All Scenarios ***
+### 3. Test All Scenarios
 ```bash
 py main.py --mode experiment
 ```
@@ -108,30 +108,29 @@ py main.py --mode experiment
 ---
 
 ## Automatic Distribution Fitting
-1. *** Fit from CSV datasets ***
-Place CSV files in:
+### 1. Fit from CSV datasets 
+*** Place CSV files in: *** 
 ```bash
 data/arrivals/
 data/departures/
 ```
-Then run:
+*** Then run: *** 
 ```bash
 py src/fitting/fit_all_distributions.py
 ```
 
-2. *** Fit from EasyFit (.edf) files ***
-Place EDF files in:
+### 2. Fit from EasyFit (.edf) files
+*** Place EDF files in: *** 
 ```bash
 data/edf/
 ```
-Run same command:
+*** Run same command: *** 
 ```bash
 py src/fitting/fit_all_distributions.py
 ```
 
-3. *** After fitting ***
-
-Automatically updated to:
+### 3. After fitting
+*** Automatically updated to: *** 
 ```bash
 src/config/distributions.json
 ```
@@ -140,14 +139,14 @@ src/config/distributions.json
 
 ## Adaptive Signal Logic Summary
 
-For each phase:
+*** For each phase: *** 
 - Measure delay of involved lanes  
 - Compute pressure  
 - Identify most/least pressured lane groups  
 - Shift green duration among phases  
 - Update at end of every control cycle  
 
-This algorithm is implemented inside:
+*** This algorithm is implemented inside: *** 
 ```bash
 AdaptiveLightControl.update_duration()
 ```
@@ -182,6 +181,6 @@ Feel free to open an [Issue] or [Pull Request] to participate.
 ---
 
 ## Author
-Seyoon Oh
-Korea University — School of Industrial & Management Engineering
-Email: osy7336@korea.ac.kr
+- Seyoon Oh
+- Korea University : School of Industrial & Management Engineering
+- Email : osy7336@korea.ac.kr
