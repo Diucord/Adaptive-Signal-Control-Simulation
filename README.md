@@ -109,28 +109,28 @@ py main.py --mode experiment
 
 ## Automatic Distribution Fitting
 ### 1. Fit from CSV datasets 
-*** Place CSV files in: *** 
+Place CSV files in: 
 ```bash
 data/arrivals/
 data/departures/
 ```
-*** Then run: *** 
+Then run:
 ```bash
 py src/fitting/fit_all_distributions.py
 ```
 
 ### 2. Fit from EasyFit (.edf) files
-*** Place EDF files in: *** 
+Place EDF files in:
 ```bash
 data/edf/
 ```
-*** Run same command: *** 
+Run same command:
 ```bash
 py src/fitting/fit_all_distributions.py
 ```
 
 ### 3. After fitting
-*** Automatically updated to: *** 
+Automatically updated to:
 ```bash
 src/config/distributions.json
 ```
@@ -139,14 +139,14 @@ src/config/distributions.json
 
 ## Adaptive Signal Logic Summary
 
-*** For each phase: *** 
+For each phase:
 - Measure delay of involved lanes  
 - Compute pressure  
 - Identify most/least pressured lane groups  
 - Shift green duration among phases  
 - Update at end of every control cycle  
 
-*** This algorithm is implemented inside: *** 
+This algorithm is implemented inside:
 ```bash
 AdaptiveLightControl.update_duration()
 ```
